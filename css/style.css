@@ -1,0 +1,329 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.barra-lateral {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 120px;
+  height: 100vh;
+  background-color: #fff;
+  border-right: 2px solid #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.barra-lateral .item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 15px 0;
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.barra-lateral .item img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+
+.barra-lateral .item p {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.contenido-principal {
+  margin-left: 140px;
+  padding: 40px;
+}
+
+.contenido-principal h1 {
+  font-size: 38px;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.contenido-principal .subtitulo {
+  font-size: 20px;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.item-galeria {
+  width: calc(10% - 12px);
+  text-align: center;
+}
+
+.item-galeria img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.item-galeria p {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #444;
+}
+
+.producto-destacado {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.producto-destacado h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.producto-destacado img {
+  width: 600px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.producto-destacado h3 {
+  margin-top: 15px;
+  font-size: 20px;
+  color: #444;
+}
+
+.producto-destacado p {
+  font-size: 16px;
+  color: #666;
+  margin-top: 10px;
+}
+
+.producto-oferta {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  margin-top: 60px;
+}
+
+.producto-oferta img {
+  width: 600px;
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.info-producto {
+  max-width: 500px;
+}
+
+.info-producto h1 {
+  font-size: 26px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.precio-oferta {
+  font-size: 20px;
+  color: #005f73;
+  margin-bottom: 10px;
+}
+
+.precio-oferta .precio {
+  font-weight: bold;
+}
+
+.descripcion {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.5;
+}
+
+.btn-carrito {
+  margin-top: 20px;
+  padding: 15px 30px;
+  width: 100%;
+  background-color: #0077b6;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-carrito:hover {
+  background-color: #005f86;
+}
+
+.grid-productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.producto {
+  text-align: center;
+}
+
+.producto img {
+  width: 100%;
+  max-width: 220px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.producto p {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #444;
+}
+
+.zona-chat {
+  display: flex;
+  border: 1px solid #ccc;
+  height: 500px;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 40px;
+}
+
+/* Lista de chats */
+.lista-chats {
+  width: 150px;
+  background-color: #f1f1f1;
+  border-right: 1px solid #ccc;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.chat-opcion {
+  padding: 10px;
+  background-color: white;
+  border-radius: 6px;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+  border: 1px solid #ccc;
+}
+
+.chat-opcion:hover {
+  background-color: #e0e0e0;
+}
+
+.chat-mensajes {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  overflow-y: auto;
+  background-color: #fafafa;
+}
+
+.mensaje {
+  max-width: 70%;
+  padding: 10px 15px;
+  border-radius: 12px;
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+.mensaje.vendedor {
+  align-self: flex-start;
+  background-color: #d0eaff;
+  color: #00324a;
+}
+
+.mensaje.comprador {
+  align-self: flex-end;
+  background-color: #d9fdd3;
+  color: #2b4d2e;
+}
+
+
+@media (max-width: 768px) {
+  .barra-lateral {
+    position: static;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px 0;
+  }
+
+  .contenido-principal {
+    margin-left: 0;
+    padding: 20px;
+  }
+
+  .producto-oferta {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .producto-oferta img {
+    width: 90%;
+  }
+
+  .info-producto {
+    max-width: 100%;
+  }
+
+  .btn-carrito {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .galeria {
+    justify-content: center;
+  }
+
+  .item-galeria {
+    width: 45%;
+  }
+}
+
+@media (max-width: 480px) {
+  .item-galeria {
+    width: 100%;
+  }
+
+  .contenido-principal h1,
+  .seccion-productos h2 {
+    font-size: 24px;
+  }
+
+  .info-producto h1 {
+    font-size: 22px;
+  }
+
+  .precio-oferta {
+    font-size: 18px;
+  }
+
+  .descripcion {
+    font-size: 14px;
+  }
+}
+
+
